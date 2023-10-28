@@ -17,6 +17,12 @@ class AlarmDataGenerator:
     - alarm_connectedness: Probability that one alarm is connected to another.
     - alarm_per_device_density: Density of alarms per device.
     - ground_truth_masking_level: Percentage of values to mask in the ground truth for training.
+
+    # Example usage
+    num_alarm_ids = NUM_ALARM_IDS
+    num_device_ids = NUM_DEVICE_IDS
+    duration = DURATION
+    dataset_dict = generate_alarm_data_and_matrix(num_alarm_ids, num_device_ids, duration)
     """
 
     def __init__(self, num_alarm_ids=30, num_device_ids=50, duration=100_000, 
