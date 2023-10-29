@@ -63,8 +63,11 @@ class Find_root_causes(object):
         """
         Runs the Hawkes model to identify causal relationships.
         """
+        if prior_information is None:
+            model = TTPM(self.topology_matrix, max_links=max_links, iters=iters, time_decay=time_decay, model_selector=model_selector, BIC_coef=BIC_coef)
         # Initialize Hawkes model and learn
-        model = Hawkes(self.topology_matrix, prior_information=prior_information, max_links=max_links, iters=iters, time_decay=time_decay, model_selector=model_selector, BIC_coef=BIC_coef)
+        else:
+            model = Hawkes(self.topology_matrix, prior_information=prior_information, max_links=max_links, iters=iters, time_decay=time_decay, model_selector=model_selector, BIC_coef=BIC_coef)
         model.learn(self.alarm_data)
         # Get estimated causal matrix
         self.est_causal_matrix = model.causal_matrix.to_numpy()
