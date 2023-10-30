@@ -108,11 +108,18 @@ def main():
     results_dict = {}
     
     # Generate datasets and train models
+    
     for i in range(NUM_ALARM_DATASETS):
-        dataset = gen_dataset()
-        datasets_dict[f'dataset_{i}'] = dataset
-        datasets_dict[f'dataset_{i}']['results'] = model(dataset['alarm_df'], dataset['device_adj_matrix'])
-        
+        if generate_new_datasets:
+            dataset = gen_dataset()
+            datasets_dict[f'dataset_{i}'] = dataset
+            datasets_dict[f'dataset_{i}']['results'] = model(dataset['alarm_df'], dataset['device_adj_matrix'])
+        else:
+            datasets_dict[f'dataset_{i}']['alarm_df'] = pd.read_csv(f'data/ProcedurallyGeneratedDatasets/dataset{i}/alarm_data_{i}.csv')
+            datasets_dict[f'dataset_{i}']['device_adj_matrix'] = pd.read_csv(f'data/ProcedurallyGeneratedDatasets/dataset{i}/device_adj_matrix_{i}.csv')
+            datasets_dict[f'dataset_{i}']['alarm_adj_matrix'] = pd.read_csv(f'data/ProcedurallyGeneratedDatasets/dataset{i}/ground_truth_adj_matrix_{i}.csv')
+            datasets_dict[f'dataset_{i}']['masked_alarm_adj_matrix'] = pd.read_csv(f'data/ProcedurallyGeneratedDatasets/dataset{i}/masked_ground_truth_adj_matrix_{i}.csv')
+            datasets_dict[f'dataset_{i}']['results'] = model(dataset['alarm_df'], dataset['device_adj_matrix'])
     # Visualize the results
     visualizer = Visualize()
     visualizer.visualize(datasets_dict)
