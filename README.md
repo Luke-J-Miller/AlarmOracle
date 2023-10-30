@@ -12,3 +12,17 @@ Alarm Oracle is a semi-supervised, Hawkes-process graph neural network used to c
 ![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/7ed3b2e1-3c86-46bb-a037-77d385cb7a60)
 source: https://en.wikipedia.org/wiki/Hawkes_process
 
+## Problem
+Talk about the network causal alarm problem
+
+## Data
+Talk about modeling the procedural data generation after real world networks.
+
+## Model
+Temporal Process Miner with Hawkes processes
+
+## Results
+Talk about effectiveness
+
+## Real world Application
+;alskdjfa;lskdfjk
