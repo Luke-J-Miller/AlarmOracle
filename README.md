@@ -15,6 +15,48 @@ source: https://en.wikipedia.org/wiki/Hawkes_process
 ## Problem
 Talk about the network causal alarm problem
 
+First of all, the number of alarms occurring in a power system simultaneously when
+a fault occurs is a crucial issue to concern. Once the Hydro-Québec Regional Control
+Center reported the maximum number of alarms which could be triggered by several
+types of events as follows (Durocher, 1990):
+z up to 150 alarms in 2 seconds for a transformer fault;
+z up to 2000 alarms for a generation substation fault, the first 300 alarms being
+generated during the first 5 seconds;
+z up to 20 alarms per seconds during a thunderstorm;
+z up to 15000 alarms for each regional center during the first 5 seconds of a complete system collapse
+Ma, T., Xiao, J., Xu, J., Guo, C., Yu, B., Zhu, S. (2011). Handling Power System Alarm Cascade Using a Multi-level Flow Model. In: Hu, W. (eds) Electronics and Signal Processing. Lecture Notes in Electrical Engineering, vol 97. Springer, Berlin, Heidelberg. https://doi.org/10.1007/978-3-642-21697-8_22
+
+
+
+In modern control rooms, there is a constant risk of
+information overload. In particular, as soon as there is a
+larger disturbance, the alarm system tends to overflow
+with alarms. This, in turn, makes the alarm list and the
+alarm system less useful, especially in situations where it
+would be most beneficial. In fact, when an incident starts,
+operators tend to disregard the alarm list, and only when
+the incident has been taken care of, they return to the list,
+remove all waiting alarms, and then start using it for
+monitoring. This effect seems to be more common the
+better equipped the systems is with alarms, and is well
+known in nuclear control rooms.
+Larsson, J. E., Oehman, B., Calzada, A., Nihlwing, C., Jokstad, H., Kristianssen, L. I., Kvalem, J., & Lind, M. (2006). A revival of the alarm system: Making the alarm list useful during incidents. United States: American Nuclear Society - ANS.
+
+
+
+
+Every day, tens of thousands of faults are triggered across heterogeneous and interconnected devices in a telecom network. These faults are expressed by the network devices in the form of alarms, which are transmitted to the Network Operation Centre (NOC) for further processing by network operators. Additionally, there are thousands of types of alarms. If the network operators handle all alarms sequentially, they will be overloaded and unable to concentrate on finding the underlying reasons for the faults. Generally, approximately 1 million alarms are reported to the NOC every day. If there are five network operators working 8 h per day, each operator must process 20 alarms every minute throughout the day, which is an impossible workload. Therefore, it is necessary to select the important alarms that are useful for identifying network problems.
+Jiantao Wang, Caifeng He, Yijun Liu, Guangjian Tian, Ivy Peng, Jia Xing, Xiangbing Ruan, Haoran Xie, Fu Lee Wang,
+Efficient alarm behavior analytics for telecom networks,
+Information Sciences,
+Volume 402,
+2017,
+Pages 1-14,
+ISSN 0020-0255,
+https://doi.org/10.1016/j.ins.2017.03.020.
+(https://www.sciencedirect.com/science/article/pii/S0020025517306059)
+
+
 ## Data
 Talk about modeling the procedural data generation after real world networks.
 
@@ -23,6 +65,16 @@ Temporal Process Miner with Hawkes processes
 
 ## Results
 Talk about effectiveness
+![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/736cf6ab-cfbf-4977-9012-7a3ffd3874f1)
+
+![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/99259274-4555-4ca1-82a7-9acf2e857f42)
+
+![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/a2a13437-6995-4bb1-a4d4-ac953e1f1a9c)
+
+![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/497e32fa-b4e2-4798-8ea4-333a6ed689c2)
+
+
+
 
 ## Real world Application
 ;alskdjfa;lskdfjk
