@@ -10,7 +10,6 @@ import logging
 from NetworkAlarmGenerator.py import AlarmDataGenerator
 from AlarmDataProcessor.py import AlarmDataPreprocessor
 from TemporalProcessMiner.py import TemporalProcessMiner
-from DataVisualization.py import Visualize
 
 NUM_ALARM_DATASETS = 4  # Constant for the number of alarm datasets
 
@@ -125,10 +124,6 @@ def main():
 
         # Save the predicted matrix to CSV file (Added this line)
         np.savetxt(f"{save_dir}/predicted_matrix_{i}.csv", datasets_dict[f'dataset_{i}']['predicted_matrix'])
-
-    # Visualize the results
-    visualizer = Visualize()
-    visualizer.visualize(datasets_dict)
 
 if __name__ == '__main__':
     main()
