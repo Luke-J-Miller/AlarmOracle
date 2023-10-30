@@ -107,22 +107,31 @@ def main():
     datasets_dict = {}
     results_dict = {}
     
-    # Generate datasets and train models
+    # Define directory for saving results
+    save_dir = "results/"
     
+    # Generate datasets and train models
     for i in range(NUM_ALARM_DATASETS):
         if generate_new_datasets:
             dataset = gen_dataset()
             datasets_dict[f'dataset_{i}'] = dataset
-            datasets_dict[f'dataset_{i}']['results'] = model(dataset['alarm_df'], dataset['device_adj_matrix'])
+            datasets_dict[f'dataset_{i}']['predicted_matrix'] = model(dataset['alarm_df'], dataset['device_adj_matrix'])
         else:
             datasets_dict[f'dataset_{i}']['alarm_df'] = pd.read_csv(f'data/ProcedurallyGeneratedDatasets/dataset{i}/alarm_data_{i}.csv')
             datasets_dict[f'dataset_{i}']['device_adj_matrix'] = pd.read_csv(f'data/ProcedurallyGeneratedDatasets/dataset{i}/device_adj_matrix_{i}.csv')
             datasets_dict[f'dataset_{i}']['alarm_adj_matrix'] = pd.read_csv(f'data/ProcedurallyGeneratedDatasets/dataset{i}/ground_truth_adj_matrix_{i}.csv')
             datasets_dict[f'dataset_{i}']['masked_alarm_adj_matrix'] = pd.read_csv(f'data/ProcedurallyGeneratedDatasets/dataset{i}/masked_ground_truth_adj_matrix_{i}.csv')
-            datasets_dict[f'dataset_{i}']['results'] = model(dataset['alarm_df'], dataset['device_adj_matrix'])
+            datasets_dict[f'dataset_{i}']['predicted_matrix'] = model(dataset['alarm_df'], dataset['device_adj_matrix'])
+
+        # Save the predicted matrix to CSV file (Added this line)
+        np.savetxt(f"{save_dir}/predicted_matrix_{i}.csv", datasets_dict[f'dataset_{i}']['predicted_matrix'])
+
     # Visualize the results
     visualizer = Visualize()
     visualizer.visualize(datasets_dict)
+
+if __name__ == '__main__':
+    main()
 
 if __name__ == '__main__':
     main()
