@@ -64,7 +64,7 @@ Talk about modeling the procedural data generation after real world networks.
 Temporal Process Miner with Hawkes processes
 
 ## Results
-Talk about effectiveness
+Some additional points.  Alarms and any alrams they trigger are probabilistic.  The chcance of an alarm occuring in any second on any device is 1e-8.  Additionally, an alarm cannot reach across the network if the subsequent alarm that can be triggered is not on the same device or a neighboring device.  Thus, while there exists causal relationships in the alarm matrix, it is possible for such an alarm to not be in the data.  This could be either because the time window didn't capture sufficient evidence of the event, or the topology precludes it.
 ![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/736cf6ab-cfbf-4977-9012-7a3ffd3874f1)
 
 ![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/99259274-4555-4ca1-82a7-9acf2e857f42)
