@@ -79,8 +79,40 @@ https://doi.org/10.1016/j.ins.2017.03.020.
 Talk about modeling the procedural data generation after real world networks.
 
 ## Model
-Temporal Process Miner with Hawkes processes
+TemporalProcessMiner - A Hybrid Approach to Temporal Causal Discovery
+Introduction (Revised):
+TemporalProcessMiner aims to discover causal relationships in event-based temporal networks using a hybrid approach that combines graph theory, statistical learning, and optimization techniques. This enriched framework encapsulates NetworkX graphs, pandas DataFrames, Expectation-Maximization (EM), Hawkes processes, Poisson processes, and optimization methods.
 
+Key Structures (Revised):
+Poisson Processes: These are employed for the basic modeling of random events in the network when no historical events are considered.
+Hawkes Processes: Extends Poisson processes by including the memory of past events to predict the conditional intensity of future events.
+Modalities (Revised):
+Stochastic Processes: The algorithm integrates Hawkes and Poisson processes for a nuanced understanding of temporal event dynamics.
+Optimization Techniques: Employs gradient descent and hill climbing to optimize hyperparameters and causal weights.
+Algorithmic Steps (Augmented):
+Initialization (Revised):
+
+Utilizes Poisson processes to provide initial estimates for events that do not have prior occurrences.
+Hop-Analysis (Augmented):
+
+Applies Dijkstra's algorithm to map the shortest paths between nodes, and to determine k-hop neighbors.
+Hawkes Process Modeling:
+
+Utilizes the memory function to model the intensity of events as influenced by previous events.
+Expectation-Maximization (EM) (Augmented):
+
+Employs Hawkes processes within the EM algorithm to better fit the event data and update causal matrices.
+Gradient Descent & Hill Climbing:
+
+Gradient descent is used for continuous optimization of causal impact weights.
+Hill climbing is used for discrete optimization problems, such as choosing the optimal number of 'k-hops'.
+Stopping Criteria (Augmented):
+
+Uses Akaike Information Criterion (AIC) or Bayesian Information Criterion (BIC) along with the performance of gradient descent and hill climbing to decide when to stop iterations.
+Complexity (Revised):
+The addition of Hawkes processes and optimization techniques slightly increases the computational complexity but enhances the algorithm's predictive performance.
+Conclusion (Revised):
+TemporalProcessMiner is a sophisticated and versatile algorithm that efficiently integrates multiple computational and statistical techniques. With its hybrid approach of using graph-theoretical, statistical, and optimization methods, it provides a powerful tool for complex temporal causal discovery in various applications
 ## Results
 Some additional points.  Alarms and any alrams they trigger are probabilistic.  The chcance of an alarm occuring in any second on any device is 1e-8.  Additionally, an alarm cannot reach across the network if the subsequent alarm that can be triggered is not on the same device or a neighboring device.  Thus, while there exists causal relationships in the alarm matrix, it is possible for such an alarm to not be in the data.  This could be either because the time window didn't capture sufficient evidence of the event, or the topology precludes it.
 ![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/736cf6ab-cfbf-4977-9012-7a3ffd3874f1)
