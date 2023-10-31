@@ -9,13 +9,13 @@ o. Title Slide
 5. Results
 6. Future
 7. Conclusion
-## Time Complexity
-O(N log N) (for alarm data in start_init)} + 
-O(|E| + |V| log |V|) (for topology in k_hop_neighbors) + 
-O(max_iter * N^3) for alarm data in hill_climb and em) + 
-O(k * N) (for num hops (k)  and alarm data _get_effect_tensor_decays() & _get_effect_tensor_decays_each_hop()
-The likely dominating term i O(N^3) where N is the number of logged events.
-This is somewhat mitigated by the data preprocessing.
+## Time Complexity  
+O(N log N) (for alarm data in start_init)} +   
+O(|E| + |V| log |V|) (for topology in k_hop_neighbors) +   
+O(max_iter * N^3) for alarm data in hill_climb and em) +   
+O(k * N) (for num hops (k)  and alarm data _get_effect_tensor_decays() & _get_effect_tensor_decays_each_hop()  
+The likely dominating term i O(N^3) where N is the number of logged events.  
+This is somewhat mitigated by the data preprocessing.  
 
 ## Iterative Root Cause Discovery of Network Alarm Data using High-Precision, Low-Sensitivity Graph Neural Networks.
 <!-- Centered and resized image -->
