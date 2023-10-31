@@ -78,3 +78,6 @@ Some additional points.  Alarms and any alrams they trigger are probabilistic.  
 
 ## Real world Application
 ;alskdjfa;lskdfjk
+
+## Future work
+This section needs heavilty stresseed that this is preliminary work.  In fact, we need to express this throughout the slideshow and readme.  Future work could include comparing device topologies with alarm data and information to eliminate possibilities prior to analysis.  Another method would be to have multiple windows of time from the same topology.  An analysis is ran, and some high confidence causalities are added to bolster the prior information given to the model.
