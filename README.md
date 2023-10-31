@@ -1,4 +1,15 @@
 # AlarmOracle
+
+# Slide outline
+o. Title Slide
+1. Intro
+2. Problem Statement
+3. Data Description
+4. Algorithm
+5. Results
+6. Future
+7. Conclusion
+8. 
 ## Iterative Root Cause Discovery of Network Alarm Data using High-Precision, Low-Sensitivity Graph Neural Networks.
 <!-- Centered and resized image -->
 <div align="center">
