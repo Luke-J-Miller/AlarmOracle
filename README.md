@@ -31,6 +31,31 @@ Alarm Oracle is a semi-supervised, Hawkes-process graph neural network used to c
 source: https://en.wikipedia.org/wiki/Hawkes_process
 
 ## Problem
+## Real examples of disasters caused by alarm floods and cascades.
+###vThree Mile Island Nuclear Accident (1979)
+The Three Mile Island incident is perhaps one of the most cited cases when discussing the dangers of alarm floods. A reactor at the Three Mile Island plant near Harrisburg, Pennsylvania, suffered a partial meltdown on March 28, 1979. After a series of mechanical failures, including a stuck valve and cooling malfunctions, operators were bombarded with over 100 alarms in a short period. These alarms came in the form of lights, sounds, and gauges showing abnormal conditions.
+
+The inundation of alarms overwhelmed the operators and severely hampered their ability to diagnose the situation accurately. The cacophony of alarms led to sensory overload, making it difficult to prioritize responses or even understand what was going wrong. While other human and mechanical factors also contributed, the alarm cascade effectively delayed quick and precise intervention, leading to the release of a small amount of radioactive gases.
+
+### Piper Alpha Oil Platform Disaster (1988)
+Another case where alarm cascades played a role was the Piper Alpha disaster in the North Sea. On July 6, 1988, a series of explosions and fires destroyed the Piper Alpha oil platform, resulting in 167 deaths. A gas leak initiated a fire, which then triggered a series of additional events and alarms. The alarm systems were not designed to handle such a high level of complexity and interdependence between various systems.
+
+Operators were inundated with alarms but had no effective way to prioritize them. The situation was made worse by the absence of an automatic shutdown system for certain parts of the platform. The crew was overwhelmed, and emergency procedures proved to be woefully inadequate, partly because of the confusion caused by the numerous alarms.
+
+### Texas City Refinery Explosion (2005)
+In this case, a BP oil refinery in Texas City exploded, killing 15 workers and injuring over 180 others. While human errors and neglect of safety procedures were the primary causes, the control room was subjected to multiple alarms without clear prioritization. Operators failed to notice key indicators of an impending disaster, partially due to the high number of alarms that they had become conditioned to ignore. This phenomenon, often called "alarm fatigue," led to delays in taking preventive action.
+
+### Healthcare and Alarm Fatigue
+In modern healthcare settings, especially intensive care units, alarm fatigue has become a significant problem. Medical staff are exposed to a plethora of alarms from various equipment like heart rate monitors, ventilators, and infusion pumps. The frequent alarms desensitize the healthcare workers, making it more likely for them to miss or delay responses to critical alarms. This has led to preventable adverse events, although these are typically not as dramatic as large-scale industrial accidents.
+
+### Industrial Internet of Things (IIoT)
+In the context of the Industrial Internet of Things (IIoT), alarm cascades could potentially become a significant issue. As industrial settings become more interconnected, the risk of an alarm flood that could overwhelm operators grows. While not a specific incident, it's an area of concern that is gaining attention.
+
+### Cybersecurity Incidents
+In cybersecurity, false alarms or too many simultaneous alarms can also be an issue, potentially causing operators to miss critical intrusion detection warnings. However, these are generally not discussed in the same context as physical safety incidents like those at Three Mile Island or Piper Alpha.
+
+These incidents highlight the need for smarter, more adaptive alarm management systems. Modern approaches often involve using AI and machine learning to predict and prioritize alarms, thereby aiding human operators in making more informed decisions under pressure.
+
 Talk about the network causal alarm problem
 
 First of all, the number of alarms occurring in a power system simultaneously when
