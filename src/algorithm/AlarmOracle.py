@@ -56,7 +56,7 @@ class BaseLearner(metaclass=abc.ABCMeta):
         """
         self._causal_matrix = value
 
-class TemporalProcessMiner(BaseLearner):
+class AlarmOracle(BaseLearner):
     """
 
     A model that learns causal structures through temporal process mining with a Hawkes Process
@@ -88,7 +88,7 @@ class TemporalProcessMiner(BaseLearner):
     >>> from castle.common import GraphDAG
     >>> from castle.metrics import MetricsDAG
     >>> X = alarm_data
-    >>> model = TemporalProcessMiner(topology_matrix, max_hop=2)
+    >>> model = AlarmOracle(topology_matrix, max_hop=2)
     >>> model.learn(X)
     >>> causal_matrix = ttpm.causal_matrix
     # plot est_dag and true_dag
