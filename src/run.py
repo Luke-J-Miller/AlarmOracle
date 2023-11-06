@@ -9,7 +9,7 @@ import logging
 
 from NetworkAlarmGenerator.py import AlarmDataGenerator
 from AlarmDataProcessor.py import AlarmDataPreprocessor
-from TemporalProcessMiner.py import TemporalProcessMiner
+from AlarmOracle.py import AlarmOracle
 
 NUM_ALARM_DATASETS = 4  # Constant for the number of alarm datasets
 
@@ -90,13 +90,13 @@ def model(alarm_data, topology_matrix):
         num_nodes = len(set(X['node']))
         topology_matrix = np.zeros((num_nodes, num_nodes))
 
-    # Causal structure learning using TTPM
-    ttpm = TTPM(topology_matrix, delta=0.01, max_hop=2, max_iter=50)
-    ttpm.learn(X)
+    # Causal structure learning using AlarmOracle
+    model = AlarmOracle(topology_matrix, delta=0.01, max_hop=2, max_iter=50)
+    model.learn(X)
     
     # Obtain and return estimated causal structure
-    est_causal_matrix = ttpm.causal_matrix.to_numpy()
-    est_causal_matrix = (remove_diagnal_entries(ttpm.causal_matrix.values))
+    est_causal_matrix = model.causal_matrix.to_numpy()
+    est_causal_matrix = (remove_diagnal_entries(model.causal_matrix.values))
     return est_causal_matrix
 
 def main():
