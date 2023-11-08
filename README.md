@@ -72,13 +72,14 @@ The addition of Hawkes processes and optimization techniques slightly increases 
 ## Results
 Some additional points.  Alarms and any alrams they trigger are probabilistic.  The chcance of an alarm occuring in any second on any device is 1e-8.  Additionally, an alarm cannot reach across the network if the subsequent alarm that can be triggered is not on the same device or a neighboring device.  Thus, while there exists causal relationships in the alarm matrix, it is possible for such an alarm to not be in the data.  This could be either because the time window didn't capture sufficient evidence of the event, or the topology precludes it.
 ### Precision
-![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/736cf6ab-cfbf-4977-9012-7a3ffd3874f1)
 
-![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/99259274-4555-4ca1-82a7-9acf2e857f42)
+![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/70181745/c132519c-81e2-4d3e-8a5b-68b04dadc815)
 
-![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/a2a13437-6995-4bb1-a4d4-ac953e1f1a9c)
+![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/70181745/5bbb313b-e45f-4722-b5b3-d837ffb16add)
 
-![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/497e32fa-b4e2-4798-8ea4-333a6ed689c2)
+![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/70181745/f0ff5654-cf66-4c76-9c20-97b5c1753e0a)
+
+![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/70181745/33d32c53-0ed5-4343-925f-f48fb7aa24aa)
 
 
 ### Time Complexity  
