@@ -70,7 +70,7 @@ Complexity :
 The addition of Hawkes processes and optimization techniques slightly increases the computational complexity but enhances the algorithm's predictive performance.
 
 ## Results
-Some additional points.  Alarms and any alrams they trigger are probabilistic.  The chcance of an alarm occuring in any second on any device is 1e-8.  Additionally, an alarm cannot reach across the network if the subsequent alarm that can be triggered is not on the same device or a neighboring device.  Thus, while there exists causal relationships in the alarm matrix, it is possible for such an alarm to not be in the data.  This could be either because the time window didn't capture sufficient evidence of the event, or the topology precludes it.
+Some additional points.  Alarms and any alarms they trigger are probabilistic.  The chance of an alarm occuring in any second on any device is 1e-8.  Additionally, an alarm cannot reach across the network if the subsequent alarm that can be triggered is not on the same device or a neighboring device.  Thus, while there exists causal relationships in the alarm matrix, it is possible for such an alarm to not be in the data.  This could be either because the time window didn't capture sufficient evidence of the event, or the topology precludes it. As you can see below in our results, the green is true positives that our model identified and the gray is potential points, as you can notice we did not have any false positives in our results as this would lead people using this on a wild goose chase looking at things that would not need to be looked at. 
 ### Precision
 
 ![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/70181745/c132519c-81e2-4d3e-8a5b-68b04dadc815)
@@ -91,7 +91,7 @@ The likely dominating term i O(N^3) where N is the number of logged events.
 This is somewhat mitigated by the data preprocessing. 
 
 ## Real world Application
-AlarmOracle as a proof of concept has shown remarkable results, and the team looks forward to finding application in real-world envirionments.
+AlarmOracle as a proof of concept has shown remarkable results, and given the chance/opportunity we would love to see how it would do in a real world application where there is real time data being received by our model as well as input from an operator as this would be the person that would benefit the most from this model. As we saw above in our real world problems we see that if the operators had something such as Alarm Oracle they would have been able to catch the issues really early and could have prevented these disasters from happening. Having something such as Alarm Oracle could lead to many lives saved as well as companies saving their budgets and investing it elsewhere leading to stronger growth. 
 
 ## Future work
-Future work could include comparing device topologies with alarm data and information to eliminate possibilities prior to analysis.  Another method would be to have multiple windows of time from the same topology.  An analysis is ran, and some high confidence causalities are added to bolster the prior information given to the model.
+Future work could include comparing device topologies with alarm data and information to eliminate possibilities prior to analysis.  Another method would be to have multiple windows of time from the same topology.  An analysis is ran, and some high confidence causalities are added to bolster the prior information given to the model. We would like to have our model able to take in real time data in order to see how we can apply this to a real world application and make it something that could be used to save millions of dollars and the lives of the people like in our real world examples. 
