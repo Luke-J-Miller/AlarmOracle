@@ -149,8 +149,7 @@ Alarm Oracle in crucial network management and disaster
 prevention roles.  
   
 ## References  
-[1] Pcic 2021: Causal discovery, Aug 2021. https://competition.
-huaweicloud.com/information/1000041487/dataset.  
+[1] Pcic 2021: Causal discovery, Aug 2021. https://competition.huaweicloud.com/information/1000041487/dataset.  
   
 [2] CAI, R., WU, S., QIAO, J., HAO, Z., ZHANG, K., AND ZHANG, X.
 Thps: Topological hawkes processes for learning causal structure on
