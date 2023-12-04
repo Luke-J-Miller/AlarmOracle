@@ -1,4 +1,4 @@
-# Alarm Oracle: A Graph Neural Network for Causal Structure Analysis of Alarm Logs  
+# Alarm Oracle: A Graph Neural Network for Causal Structure Analysis of Alarm Logs    
 ## Luke J. Miller - University of Missouri, Kansas City
 ## Semir Hot - University of Missouri, Kansas City
 ## Abstract
