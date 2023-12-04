@@ -18,7 +18,8 @@ discovery algorithm. This algorithm, further refined with an
 Expectation-Maximization framework and a hill climbing
 technique, ensures high precision in determining causal relationships. The findings from this study illuminate the system’s
 potential in network management and disaster prevention, reinforcing the critical demand for advanced analytical tools in
-the realm of complex systems management.
+the realm of complex systems management.  
+  
 ## 1 Introduction
 Alarm Oracle represents an application of graph neural networks, meticulously crafted for the root cause analysis of
 alarm cascades. This system, operating on an unsupervised
@@ -26,7 +27,8 @@ framework and harnessing the Hawkes process, is adept at
 iteratively pinpointing root causes with a high degree of confidence. Designed with a focus on precision rather than sensitivity, Alarm Oracle aims for the utmost accuracy and reliability
 in its identified causal correlations. Its practical utility is realized through collaboration with domain experts, where the
 system aids network administrators in unraveling the intricate structures behind alarm cascades, enabling timely and
-effective interventions.
+effective interventions.  
+  
 ## 2 Novelty and Motivation
 The impetus for developing Alarm Oracle extends beyond
 the realm of network administration, drawing lessons from
@@ -37,7 +39,8 @@ cascades and the indispensable role of efficient root cause
 analysis tools in high-stakes settings. Despite advancements
 in technology, the challenge of managing complex alarm systems persists in various modern scenarios [5], underscoring
 the necessity of advanced tools like Alarm Oracle for proactive and remedial measures in network management.
-## 3 Data
+## 3 Data  
+  
 The dataset [1] employed in this study was initially sourced
 from Huawei. However, it lacked explicit ground truth information necessary for determining the causality of events.
 To address this limitation, a synthetic dataset was created,
@@ -55,9 +58,10 @@ an initial alarm could probabilistically instigate a subsequent
 alarm on the same or an adjacent device, effectively simulating a realistic alarm cascade. This framework was utilized
 to generate four distinct datasets, each varying in duration,
 network topology, alarm density, and the probabilities associated with triggering alarm cascades. These datasets provided
-the basis for training, with network topologies and alarm logs
+the basis for training, with network topologies and alarm logs  
+  
 ![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/60347d09-cf4a-4eb1-8152-48aa6cd05555)
-
+  
 serving as primary inputs, while the causality matrix was reserved for post-training verification within the unsupervised
 learning model. To facilitate this process, two key classes
 were developed: AlarmDataPreprocessor and AlarmDataGenerator. These classes were instrumental in both cleaning the
@@ -65,7 +69,8 @@ data and creating synthetic alarm data. The procedure encompassed a detailed con
 and adjacency matrices for effective training. This approach
 underscores the meticulous and systematic nature of the data
 preparation phase, crucial for the robustness and reliability of
-the resulting analysis.
+the resulting analysis.  
+  
 ## 4 Algorithm
 The Alarm Oracle’s algorithm is an intricate causal structure
 learning algorithm, fundamentally based on the principles
@@ -74,9 +79,10 @@ groundwork for modeling random events within the network,
 particularly when no historical data is available, while the
 latter extends this model by incorporating the memory of past
 events to enhance the prediction of future event intensities.
-In terms of its operation, the algorithm begins with the construction of a network topology using a given adjacency matrix. ![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/ba965cbf-9029-4c29-a6a6-940459a0ef36)
+In terms of its operation, the algorithm begins with the construction of a network topology using a given adjacency matrix.  
+![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/ba965cbf-9029-4c29-a6a6-940459a0ef36)  
+  
 This topology is pivotal in mapping out the relationships
-Figure 2: An Example Alarm Causality Matrix
 and interactions between various nodes (or events) within the
 network. The algorithm then embarks on a detailed learning
 process, analyzing the temporal sequences of events across
@@ -102,7 +108,8 @@ In essence, the algorithm within Alarm Oracle is a sophisticated and nuanced app
 complex causal relationships in networked environments. It
 2
 intelligently integrates various computational and statistical
-methods to offer a comprehensive view of how events influence one another over time and space within a network.
+methods to offer a comprehensive view of how events influence one another over time and space within a network.  
+  
 ## 5 Results
 The analysis of the results, particularly with a focus on the
 four confusion matrices generated figures 1 through 4, underscores the high precision of the system in accurately identifying true causal correlations within the network. A significant
@@ -125,12 +132,13 @@ discerning which of these cascades were merely probabilistically generated as op
 Such an in-depth analysis would provide a more nuanced
 understanding of the system’s predictive capabilities and its
 practical utility in real-world scenarios, where distinguishing between probable and actual alarm cascades is vital for
-efficient and accurate network management.
+efficient and accurate network management.  
+  
 ![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/22aec3e3-f47c-4719-aeaf-ebefd19c03a9)
 ![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/3a429bc9-715c-4d3d-8b3c-2c427c8aa746)
 ![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/9925494d-09c2-4d44-b213-1ecaf5532d20)
-![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/669fda77-639c-47dd-b0ce-b5c50ade3b18)
-
+![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/669fda77-639c-47dd-b0ce-b5c50ade3b18)  
+  
 ## 6 Conclusion
 The relevance of Alarm Oracle is underlined by both historical
 precedents and current challenges in network management.
@@ -141,24 +149,24 @@ crucial insights for prompt and effective decision-making.
 The prospective enhancements in algorithmic efficiency and
 adaptability to real-world data signal a promising future for
 Alarm Oracle in crucial network management and disaster
-prevention roles.
-## References
+prevention roles.  
+  
+## References  
 [1] Pcic 2021: Causal discovery, Aug 2021. https://competition.
-huaweicloud.com/information/1000041487/dataset.
-Figure 3: Confusion Matrix: Dataset 0
-Figure 4: Confusion Matrix: Dataset 1
-3
-Figure 5: Confusion Matrix: Dataset 2
-Figure 6: Confusion Matrix: Dataset 3
+huaweicloud.com/information/1000041487/dataset.  
+  
 [2] CAI, R., WU, S., QIAO, J., HAO, Z., ZHANG, K., AND ZHANG, X.
 Thps: Topological hawkes processes for learning causal structure on
 event sequences. IEEE Transactions on Neural Networks and Learning
-Systems (2022), 1–15.
+Systems (2022), 1–15.  
+  
 [3] GRAY, M., AND ROSEN, I. The Warning: Accident at Three Mile Island.
-WW Norton & Company, 2003.
+WW Norton & Company, 2003.  
+  
 [4] OYEN, D., NICULESCU-MIZIL, A., OSTROFF, R., STEWART, A., AND
 CLARK, V. P. Controlling the precision-recall tradeoff in differential
-dependency network analysis, 2013.
+dependency network analysis, 2013.  
+  
 [5] WANG, J., HE, C., LIU, Y., TIAN, G., PENG, I., XING, J., RUAN,
 X., XIE, H., AND WANG, F. L. Efficient alarm behavior analytics for
 telecom networks. Information Sciences 402 (2017), 1–14.
