@@ -58,18 +58,15 @@ an initial alarm could probabilistically instigate a subsequent
 alarm on the same or an adjacent device, effectively simulating a realistic alarm cascade. This framework was utilized
 to generate four distinct datasets, each varying in duration,
 network topology, alarm density, and the probabilities associated with triggering alarm cascades. These datasets provided
-the basis for training, with network topologies and alarm logs  
+the basis for training, with network topologies and alarm logs serving as primary inputs, while the causality matrix was reserved for post-training verification within the unsupervised learning model. To facilitate this process, two key classes
+were developed: AlarmDataPreprocessor and AlarmDataGenerator. These classes were instrumental in both cleaning the
+data and creating synthetic alarm data. The procedure encompassed a detailed configuration of parameters and methodologies, ensuring the generation of representative alarm logs and adjacency matrices for effective training. This approach
+underscores the meticulous and systematic nature of the data
+preparation phase, crucial for the robustness and reliability of
+the resulting analysis.    
   
 ![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/60347d09-cf4a-4eb1-8152-48aa6cd05555)
   
-serving as primary inputs, while the causality matrix was reserved for post-training verification within the unsupervised
-learning model. To facilitate this process, two key classes
-were developed: AlarmDataPreprocessor and AlarmDataGenerator. These classes were instrumental in both cleaning the
-data and creating synthetic alarm data. The procedure encompassed a detailed configuration of parameters and methodologies, ensuring the generation of representative alarm logs
-and adjacency matrices for effective training. This approach
-underscores the meticulous and systematic nature of the data
-preparation phase, crucial for the robustness and reliability of
-the resulting analysis.  
   
 ## 4 Algorithm
 The Alarm Oracle’s algorithm is an intricate causal structure
@@ -79,15 +76,15 @@ groundwork for modeling random events within the network,
 particularly when no historical data is available, while the
 latter extends this model by incorporating the memory of past
 events to enhance the prediction of future event intensities.
-In terms of its operation, the algorithm begins with the construction of a network topology using a given adjacency matrix.  
-![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/ba965cbf-9029-4c29-a6a6-940459a0ef36)  
-  
-This topology is pivotal in mapping out the relationships
+In terms of its operation, the algorithm begins with the construction of a network topology using a given adjacency matrix. This topology is pivotal in mapping out the relationships
 and interactions between various nodes (or events) within the
 network. The algorithm then embarks on a detailed learning
 process, analyzing the temporal sequences of events across
 different nodes, and seeking to establish causal connections
 among them.
+
+  ![image](https://github.com/Luke-J-Miller/AlarmOracle/assets/111100132/ba965cbf-9029-4c29-a6a6-940459a0ef36)  
+    
 One of the most notable aspects is its iterative approach to
 refining the causal relationships within the network. This is
 achieved through a combination of optimization techniques,
