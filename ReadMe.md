@@ -109,7 +109,7 @@ methods to offer a comprehensive view of how events influence one another over t
   
 ## 5 Results
 The analysis of the results, particularly with a focus on the
-four confusion matrices generated figures 1 through 4, underscores the high precision of the system in accurately identifying true causal correlations within the network. A significant
+four confusion matrices generated figures 3 through 6, underscores the high precision of the system in accurately identifying true causal correlations within the network. A significant
 aspect of these results is the complete absence of false positives, which is a testament to the system’s effectiveness in
 directing operators’ attention towards relevant alarms, thereby
 minimizing the risk of misdirection. Balancing precision and
